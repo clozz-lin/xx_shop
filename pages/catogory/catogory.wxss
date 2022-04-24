@@ -1,0 +1,76 @@
+page {
+    height: 100%;
+}
+.cates {
+    height: 100%;
+}
+.cates .cates_container {
+    height: calc(100vh - 70rpx);
+    /* background-color: red; */
+    display: flex;
+}
+.cates .cates_container .left_menu {
+    flex: 2;
+    /* background-color: aqua; */
+}
+.cates .cates_container .left_menu .menu_item {
+    height: 80rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30rpx;
+    
+}
+.active {
+    color: red;
+}
+.cates .cates_container .right_content {
+    flex: 5;
+    /* background-color: lawngreen; */
+}
+.goods_list {
+    display: flex;
+    flex-wrap: wrap;
+    height: 200rpx;
+}
+.goods_list navigator{
+    width: 50%;
+    /* height: 80rpx; */
+    padding: 5rpx;
+}
+.goods_list  navigator image{
+    /* width: 144rpx; */
+    height: 348rpx;
+    background-color: var(--lightGreyColor);
+}
+.goods_list  navigator .goods_info{
+    display: flex;
+    flex-direction: column;
+}
+
+.goods_info .name{
+    /* font-size: 30rpx; */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    word-break: break-all;
+    font-size: 22rpx;
+    text-overflow: ellipsis;
+    margin: 5rpx 0;
+}
+.goods_info .goods_brief{
+    font-size: 17rpx;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    color: #726b6b;
+    margin: 5rpx 0;
+}
+.goods_info .min_retail_price{
+    font-size: 20rpx;
+    color: red;
+}

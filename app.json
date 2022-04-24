@@ -1,0 +1,47 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/catogory/catogory",
+        "pages/cart/cart",
+        "pages/center/center",
+        "pages/search/search",
+        "pages/goods/goods",
+        "pages/pay/pay"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "小店",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "/images/nav/icon-index-b.png",
+                "selectedIconPath": "/images/nav/icon-index-r.png"
+            },
+            {
+                "pagePath": "pages/catogory/catogory",
+                "text": "分类",
+                "iconPath": "/images/nav/icon-cate-off.png",
+                "selectedIconPath": "/images/nav/icon-cate-on.png"
+            },
+            {
+                "pagePath": "pages/cart/cart",
+                "text": "购物车",
+                "iconPath": "/images/nav/icon-cart-b.png",
+                "selectedIconPath": "/images/nav/icon-cart-r.png"
+            },
+            {
+                "pagePath": "pages/center/center",
+                "text": "我的",
+                "iconPath": "/images/nav/icon-center-b.png",
+                "selectedIconPath": "/images/nav/icon-center-r.png"
+            }
+        ]
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

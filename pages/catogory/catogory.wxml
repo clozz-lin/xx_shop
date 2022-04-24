@@ -1,0 +1,40 @@
+<view class="cates">
+    <!-- 搜索组件 -->
+    <SearchInput></SearchInput>
+    <view class="cates_container">
+        <!-- 左侧菜单 -->
+        <scroll-view scroll-y class="left_menu">
+            <view class="menu_item {{index === currentIndex?'active':''}}" wx:for="{{leftMenuList}}" wx:key="*this"
+            bindtap="handleItemTap"
+            data-index="{{index}}"
+            data-id="{{item.id}}"
+            >
+                {{item.name}}
+            </view>
+        </scroll-view>
+        <!-- 右侧商品内容 -->
+        <scroll-view scroll-y class="right_content"
+        scroll-top="scrollTop"
+        >
+            <view class="goods_group">
+                <!-- <view class="goods_title"></ view> -->
+                <view class="goods_list">
+                    <navigator
+                    wx:for="{{rightContent}}"
+                    wx:key="id"
+                    url="/pages/goods/goods?goods_id={{item.id}}"
+                    >
+                        <image mode="aspectFill" src="{{item.list_pic_url}}"></image>
+                        <view class="goods_info">
+                            
+                            <view class="name">{{item.name}}</view>
+                            <view class="goods_brief">{{item.goods_brief}}</view>
+                            <view class="min_retail_price">
+                               ￥ {{item.min_retail_price}}</view>
+                        </view>
+                    </navigator>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+</view>

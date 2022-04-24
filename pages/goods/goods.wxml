@@ -1,0 +1,56 @@
+<view class="goods">
+    <view class="detail_swiper">
+        <swiper autoplay circular indicator-dots duration="1000">
+            <swiper-item wx:for="{{swiperItem}}" wx:key="id" bindtap="handlePreviewImage" data-url="{{item.img_url}}">
+                <image mode="aspectFill" src="{{item.img_url}}"></image>
+            </swiper-item>
+        </swiper>
+    </view>
+    <view class="info">
+        <view class="goods_info">
+            <view class="name">{{goodsInfo.info.name}}</view>
+            <view class="goods_brief">{{goodsInfo.info.goods_brief}}</view>
+        </view>
+        <view class="share">分享</view>
+    </view>
+    <view class="price_number">
+        <view class="price">￥{{goodsInfo.info.min_retail_price}}</view>
+        <view class="number">
+            <view class=".">库存{{goodsInfo.info.goods_number}}</view>
+            <view class="sell_volume">已售{{goodsInfo.info.sell_volume}}份</view>
+        </view>
+    </view>
+    <view class="selected">
+        <text class="selected_num">
+            已选择1条
+        </text>
+    </view>
+    <view class="good_detail_text">
+        <view class="info">商品详情</view>
+    </view>
+    <view class="goods_intro">
+        <rich-text class="rich_text" user-select nodes="{{contents}}"></rich-text>
+    </view>
+    <!-- 底部tabbar -->
+    <view class="btm_tool">
+        <view class="tool_item">
+            <image src="/images/icon/chat.png"></image>
+            <view class="icon">客服</view>
+            <button open-type="contact"></button>
+        </view>
+        <navigator class="tool_item" url="/pages/index/index" open-type="switchTab">
+            <image src="/images/nav/icon-index-b.png"></image>
+            <view class="icon">主页</view>
+        </navigator>
+        <navigator class="tool_item" url="/pages/cart/cart" open-type="switchTab">
+            <image src="/images/nav/icon-cart-b.png"></image>
+            <view class="icon">购物车</view>
+        </navigator>
+        <view class="tool_item btn_cart" bindtap="handleCartAdd">
+            加入购物车
+        </view>
+        <view class="tool_item btn_buy">
+            立即购买
+        </view>
+    </view>
+</view>

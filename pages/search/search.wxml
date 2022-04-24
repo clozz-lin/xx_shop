@@ -1,0 +1,7 @@
+<view class="search">
+    <!-- 搜索 -->
+    <view class="search">
+        <image class="icon" src="/images/icon/search.png" alt=""/>
+        <text class="txt">搜索,发现更多好物</text>
+    </view>
+</view>

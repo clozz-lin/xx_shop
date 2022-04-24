@@ -1,0 +1,40 @@
+<!--index.wxml-->
+<view class="container">
+    <!-- 搜索组件 -->
+    <SearchInput></SearchInput>
+    
+    <!-- 轮播图 -->
+    <view class="banner-wrap">
+        <swiper indicator-dots="true" autoplay="true" interval="3000"  duration="1000" 	circular="true">
+            <swiper-item wx:for="{{banner}}" wx:key="goods_id">
+                <navigator url="/pages/goods/goods?goods_id={{item.goods_id}}" >  <!-- 把商品的id传给goods页面 -->
+                    <image  class="img" src="{{item.image_url}}" mode="aspectFill"></image>
+                </navigator>
+            </swiper-item>
+        </swiper>
+    </view>
+    <!-- 商品列表 -->
+    <view class="goods">
+        <view class="contain" wx:for="{{goods}}" wx:for-item="item1" wx:for-index="index1" wx:key="id">
+            <view class="title">
+                <view class="a">{{item1.name}}</view>
+                <view class="line"></view>
+            </view>
+            <view class="main">
+                <navigator class="item" wx:for="{{item1.goodsList}}" wx:for-item="item2" wx:for-index="index2" wx:key="id"
+                url="/pages/goods/goods?goods_id={{item2.id}}">
+                    <view class="image">
+                        <image src="{{item2.list_pic_url}}" mode="aspectFill"></image>
+                    </view>
+                    <view class="a">{{item2.name}}</view>
+                    <view class="b">￥{{item2.min_retail_price}}</view>
+                </navigator>
+            </view>
+            <view class="txt">点击查看更多{{item1.name}}</view>
+        </view>
+    </view>
+    <!-- 没有商品提示 -->
+    <view class="nothing">
+        <view class="txt">没有更多商品啦</view>
+    </view>
+</view>

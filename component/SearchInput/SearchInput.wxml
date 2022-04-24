@@ -1,0 +1,4 @@
+<view class="search" bindtap="goSearch">
+    <image class="icon" src="/images/icon/search.png" alt="" />
+    <text class="txt">搜索,发现更多好物</text>
+</view>

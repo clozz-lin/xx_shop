@@ -1,0 +1,22 @@
+/**app.wxss**/
+/* 全局重置样式，微信小程序不支持通配符 '*' */
+page,view, text,swiper,swiper-item,image,navigator {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container {
+  height: 100%;
+  box-sizing: border-box;
+} 
+page {
+    height: 100%;
+    /* 主题颜色 */
+    /* --themeColor: #eb4450;  */
+    /* 浅灰背景色 */
+    --lightGreyColor: #F9F9F9; 
+    
+}
+image{
+    width: 100%;
+}
